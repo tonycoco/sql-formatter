@@ -1,6 +1,6 @@
 {
   "name": "sql-formatter",
-  "version": "15.4.999",
+  "version": "15.4.99999",
   "description": "Format whitespace in a SQL query to make it more readable",
   "license": "MIT",
   "main": "dist/index.cjs",
@@ -59,7 +59,7 @@
     "test": "yarn grammar && jest",
     "test:watch": "yarn test -- --watch",
     "check": "yarn ts:check && yarn pretty:check && yarn lint && yarn test",
-    "prepare": "yarn clean && yarn build",
+    "prepare": "yarn build",
     "pre-commit": "npm-run-all --parallel ts:changes lint:changes",
     "grammar": "nearleyc src/parser/grammar.ne -o src/parser/grammar.ts",
     "build:tsup": "tsup src/index.ts --format cjs,esm --sourcemap --dts",
