@@ -59,7 +59,7 @@
     "test": "yarn grammar && jest",
     "test:watch": "yarn test -- --watch",
     "check": "yarn ts:check && yarn pretty:check && yarn lint && yarn test",
-    "prepare": "yarn build",
+    "prepare": "yarn grammar && yarn build",
     "pre-commit": "npm-run-all --parallel ts:changes lint:changes",
     "grammar": "nearleyc src/parser/grammar.ne -o src/parser/grammar.ts",
     "build:tsup": "tsup src/index.ts --format cjs,esm --sourcemap --dts",
